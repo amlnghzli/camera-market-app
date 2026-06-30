@@ -1,0 +1,190 @@
+/* Camera Detail Styles */
+
+.camera-detail-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  position: relative;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  max-width: 900px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.btn-close-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #999;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s;
+  z-index: 10;
+}
+
+.btn-close-icon:hover {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.detail-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding: 40px;
+}
+
+.detail-image {
+  position: relative;
+}
+
+.detail-image img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.detail-info h2 {
+  font-size: 28px;
+  margin: 0 0 15px 0;
+  color: #333;
+}
+
+.detail-price {
+  margin-bottom: 20px;
+}
+
+.detail-price .price {
+  font-size: 32px;
+  font-weight: bold;
+  color: #667eea;
+}
+
+.detail-specs {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.spec-row:last-child {
+  border-bottom: none;
+}
+
+.spec-row .label {
+  font-weight: 600;
+  color: #333;
+  min-width: 120px;
+}
+
+.spec-row .value {
+  color: #666;
+  text-align: right;
+}
+
+.detail-description {
+  margin-bottom: 20px;
+}
+
+.detail-description h3 {
+  font-size: 16px;
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.detail-description p {
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.detail-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-edit,
+.btn-secondary {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-edit {
+  background-color: #667eea;
+  color: white;
+}
+
+.btn-edit:hover {
+  background-color: #5568d3;
+}
+
+.btn-secondary {
+  background-color: #f5f5f5;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.btn-secondary:hover {
+  background-color: #e8e8e8;
+}
+
+@media (max-width: 768px) {
+  .detail-layout {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .btn-close-icon {
+    top: 10px;
+    right: 10px;
+  }
+
+  .detail-info h2 {
+    font-size: 20px;
+  }
+
+  .detail-price .price {
+    font-size: 24px;
+  }
+}
